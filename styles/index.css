@@ -84,12 +84,13 @@ header .logo {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    padding: 1rem;
+    margin: 10px ;
 }
 nav a:hover{
-    border: 2px solid #333;
-    background-color:rgba(70, 70, 73, 0.3);
-    padding: .8rem;
+    border: 1px solid #333;
+    background-color:rgba(224, 224, 245, 0.3);
+   
     border-radius: 2rem;
 }
 
@@ -100,34 +101,48 @@ main {
 section {
     margin-bottom: 10px;
 }
-.products {
+/* .products {
     text-align: center;
     padding: 20px;
-}
-
-.product-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaçamento entre os itens */
-    flex-wrap: wrap; /* Permite quebrar linha se necessário */
+} */
+ .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Grid responsivo */
+    gap: 1rem; /* Espaçamento entre os itens */
 }
 
 .product-item {
     border: 1px solid inherit;
     outline: none;
     display: flex;
-    flex-direction: column; /* Organiza a imagem e o texto em coluna */
+    flex-direction: column;
     align-items: center;
-    width: 250px; /* Define uma largura fixa para alinhar os itens */
+    width: 100%; /* Garante que o item ocupe toda a largura do grid */
     margin-bottom: 0;
 }
 
 .product-item img {
-
-    width: 25rem; /* Ajusta a largura da imagem ao container */
-    height: 25rem;
+    width: 100%; /* Largura do contêiner */
+    height: 15vw; /* Altura proporcional ao tamanho da tela */
+    max-height: 25rem; /* Limite máximo de altura */
+    max-width: 25rem; /* Limite máximo de largura */
+    object-fit: fill; /* Garante que todas as imagens sejam cortadas para caber no mesmo tamanho */
     margin-bottom: 0;
 }
+
+/* Regras de responsividade */
+@media (max-width: 768px) {
+    .product-item img {
+        height: 20vw; /* Ajusta dinamicamente para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item img {
+        height: 25vw; /* Ajusta dinamicamente para telas muito pequenas */
+    }
+}
+
 
 .product-item p {
     border-radius: 2rem;
