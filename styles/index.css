@@ -16,7 +16,7 @@ html {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: capitalize; 
     letter-spacing: 2px
 }
@@ -82,6 +82,7 @@ header .logo {
 } */
 
 nav a {
+    font-size: 1;
     color: #fff;
     text-decoration: none;
     padding: 1rem;
@@ -108,6 +109,7 @@ section {
  .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* Grid responsivo */
+
     gap: 1rem; /* Espaçamento entre os itens */
 }
 
@@ -146,6 +148,7 @@ section {
 
 .product-item p {
     border-radius: 2rem;
+    text-align: center;
     font-size: 14px;
     color: #d2d2d2; /* Cor do texto */
 }
@@ -155,29 +158,43 @@ section {
 
 }
 
-/* .product-list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid white;
-
+.video-container{
+   
 }
-.product-list img {
-    width: 250px;
-    height: 200px;
-    margin: 10px;
-}
-.product-list p{
-    margin-bottom: 0;
-
-} */
 
 footer {
+    display: flex;
+    justify-content: space-around; /* Distribui os itens igualmente */
+    /* align-items: center; Alinha os itens verticalmente no centro */
     background: #333;
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
     bottom: 0;
+    padding: none;
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+footer div {
+    text-align: center; /* Centraliza o conteúdo dentro de cada div */
+    max-width: 250px; /* Limita a largura das divs para evitar sobrecarga */
+}
+
+footer h3 {
+    font-size: 16px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer img {
+    vertical-align: middle; /* Alinha o ícone ao texto */
+    margin-right: 8px; /* Adiciona um espaço entre o ícone e o texto */
 }
