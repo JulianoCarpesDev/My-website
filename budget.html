@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Empresa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/budget.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img src="assets/logo.jpg" alt="Logo da Empresa" class="logo">
+        <h1 class="h1_header">carpes sistemas eletrônicos de segurança </h1>
+
+        <nav>
+            <a href="index.html">Página Inicial</a>
+
+        </nav>
+    </header>
+
+
+    <main>
+        <h1 class="h1-title">Insira os Seus Dados</h1>
+
+        <form class="form-cadastro">
+            <div class="form-group">
+
+                <input type="text" id="nome" name="nome" required placeholder="Nome" class="nome" autofocus maxlength="30">
+            </div>
+            <div class="form-group">
+                <input class="whats" type="text" id="whats" name="whats" required placeholder="WhatsApp"  maxlength="15" >
+            </div>
+            <div class="form-group">
+                <div class="cep-btn">
+                    <input type="text" id="cep" name="cep" maxlength="8" required placeholder="Cep" class="cep">
+
+                    <button id="btn-cep" class="btn-cep" type="button" onclick="buscarEndereco()">Buscar</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input class="endereco" type="text" id="endereco" name="endereco" readonly placeholder="Endereço">
+            </div>
+
+            <div class="form-group">
+                <input class="cidade" type="text" id="cidade" name="cidade" readonly placeholder="Cidade:">
+            </div>
+
+            <div class="form-group">
+
+                <input class="bairro" type="text" id="bairro" name="bairro" readonly placeholder="Bairro:">
+            </div>
+            <div class="form-group">
+                <input class="numero" type="text" id="numero" name="numero" required placeholder="Num">
+            </div>
+
+        </form>
+        <form class="form-cadastro">
+
+            <div class="form-group">
+                <label for="sistema">Qual sistema deseja instalar?</label>
+                <select id="sistema" name="sistema" onchange="mostrarItensSistema()" required>
+                    <option value="">Selecione...</option>
+                    <option value="CFTV">CFTV</option>
+                    <option value="Alarme">Alarme</option>
+                </select>
+            </div>
+            <div id="itensContainer" style="display: none;">
+                <h2>Itens do Sistema</h2>
+                <table class="table" id="itensTabela">
+                    <thead>
+                        <tr>
+                            <th>Nome do Produto</th>
+                            <th>Quantidade</th>
+                            <th>Valor Unitário</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas de itens serão adicionadas aqui -->
+                    </tbody>
+                </table>
+                <button type="button" onclick="adicionarItem()">Adicionar Item</button>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Cadastrar Cliente</button>
+            </div>
+        </form>
+
+    </main>
+
+    <footer>
+        <div>
+            <p>
+                &copy; Carpes Sistemas. Todos os direitos reservados.
+            </p>
+        </div>
+        <div>
+            <p>
+                <a href="https://wa.me/5548984699201" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                        width="30" height="30">
+                    WhatsApp: (48) 98469-9201
+                </a>
+            </p>
+        </div>
+
+    </footer>
+
+
+
+    <script src="scripts/budget.js"></script>
+
+</body>
+
+</html>

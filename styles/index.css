@@ -97,6 +97,7 @@ nav a:hover{
 
 main {
     padding: 20px;
+    
 }
 
 section {
@@ -151,6 +152,7 @@ section {
     text-align: center;
     font-size: 14px;
     color: #d2d2d2; /* Cor do texto */
+    margin-bottom: 15rem;
 }
 .product-item p:hover{
     background-color: rgba(42, 42, 43, 0.12);
@@ -158,26 +160,23 @@ section {
 
 }
 
-.video-container{
-   
-}
-
 footer {
+    margin-bottom: 0;
     display: flex;
-    justify-content: space-around; /* Distribui os itens igualmente */
-    /* align-items: center; Alinha os itens verticalmente no centro */
+    justify-content: space-around;
     background: #333;
     color: #fff;
-    bottom: 0;
-    padding: none;
+    position: fixed; /* Torna o footer fixo na tela */
+    bottom: 0; /* Posiciona no final da página */
     left: 0;
-    width: 100%;
+    width: 100%; /* Faz o footer ocupar toda a largura */
     font-size: 12px;
+    /* padding: 10px 0; Adiciona um espaço interno no footer */
 }
 
 footer div {
-    text-align: center; /* Centraliza o conteúdo dentro de cada div */
-    max-width: 250px; /* Limita a largura das divs para evitar sobrecarga */
+    text-align: center;
+    max-width: 250px;
 }
 
 footer h3 {
@@ -195,6 +194,6 @@ footer a:hover {
 }
 
 footer img {
-    vertical-align: middle; /* Alinha o ícone ao texto */
-    margin-right: 8px; /* Adiciona um espaço entre o ícone e o texto */
+    vertical-align: middle;
+    margin-right: 8px;
 }
